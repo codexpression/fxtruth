@@ -1,0 +1,370 @@
+@font-face {
+    font-family: "Raleway Regular";
+    src: url("./font/raleway/Raleway-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway Regular';
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Aventura Bold";
+    src: url("./font/Aventura/Aventura-Bold.eot");
+    src: url("./font/Aventura/Aventura-Bold.eot?#iefix") format("embedded-opentype"),
+      url("./font/Aventura/Aventura-Bold.woff") format("woff"),
+      url("./font/Aventura/Aventura-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Raleway ExtraBold";
+    src: url("./font/raleway/Raleway-ExtraBold.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.App {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(to right, #222529da, #131416),
+    url('./163.jpg');
+    background-size: cover;
+    height: 100vh;
+    padding: 0px 3%;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0;
+    color: white
+}
+
+.menu-btn {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    outline: none;
+    display: none;
+}
+
+nav .logo {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1;
+}
+
+nav .logo .bold {
+    font-family: 'Aventura Bold';
+    font-size: 25px;
+}
+
+nav .logo .light {
+    color: #f5873d;
+    letter-spacing: 4px;
+}
+
+nav .links {
+    margin-right: auto;
+}
+
+nav .links a {
+    padding: 0 10px;
+    color: silver;
+    text-decoration: none;
+}
+
+nav .support-members button {
+    border: none;
+    color: silver;
+    background: transparent; 
+    outline: none;
+}
+
+nav .support-btn {
+    position: relative;
+    right: 20px;
+    cursor: pointer;
+}
+
+nav .member-btn  {
+    padding: 12px 15px;
+    background: linear-gradient(to right, #262a2f, #1f2227) !important;
+    box-shadow: 2px 8px 15px #111;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav .member-btn:hover  {
+    padding: 12px 15px;
+    background: linear-gradient(to right, #1f2227, #262a2f) !important;
+    box-shadow: 2px 8px 15px #222;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    color: white;
+    padding: 0px 5%;
+    height: calc(100vh - 81px);
+    position: relative;
+}
+
+.hero .left {
+    width: 50vw;
+    display: flex;
+    padding-top: 8%;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hero .left .hero-text {
+    font-family: 'Raleway ExtraBold';
+    font-size: 80px;
+}
+
+.hero .left .hero-sub {
+    font-family: 'Raleway Regular';
+    font-size: 30px;
+    text-align: center;
+    color: #f5873d;
+    display: inline;
+    position: relative;
+    top: 20px;
+    left: 70px;
+}
+
+.hero .left .hero-sub:before {
+    content: " ";
+    position: absolute;
+    background: #f5873d;
+    width: 60px;
+    height: 2px;
+    top: 50%;
+    left: -30%;
+}
+
+.hero .left .cta-btn {
+    padding: 15px 20px;
+    background: linear-gradient(to right, #262a2f, #1f2227) !important;
+    box-shadow: 2px 8px 15px #111;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60%;
+    color: white;
+    position: relative;
+    top: 50px;
+    border: none;
+    font-size: large;
+}
+
+.hero .left .cta-btn:hover {
+    background: linear-gradient(to right, #262a2f, #1f2227) !important;
+    box-shadow: 10px 10px 12px #111;
+}
+
+.hero .right {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10%;
+}
+
+.hero .right img {
+    width: 100%;
+}
+
+.scroll-to {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 50;
+    animation-name: bounceSc;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounceSc {
+    from {
+        bottom: 11%;
+    }
+    to  {
+        bottom: 9%;
+    }
+}
+
+@keyframes heightSc {
+    from {
+        height: 0;
+        top: -120px;
+    }
+    to  {
+        height: 70px;
+        top: -90px;
+    }
+}
+
+.scroll-to::before {
+    position: absolute;
+    content: " ";
+    width: 2px;
+    height: 70px;
+    background-color: white;
+    top: -90px;
+    left: 14px;
+    animation-name: heightSc;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@media only screen and (max-width: 770px) {
+   header .hero {
+       display: flex;
+       flex-direction: column-reverse;
+       justify-content: flex-end;
+   }
+   
+   .hero .left, .hero .right  {
+       width: 100%
+    }
+
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero .right img {
+        width: 70%;
+    }
+
+    .hero .left h1.hero-text {
+        text-align: center;
+        width: 90%;
+        font-size: 70px;
+        margin: auto;
+    }
+
+    .hero .left .hero-sub {
+        left: 30%;
+    }
+
+    .cta-btn {
+        display: block;
+        margin: auto;
+    }
+}
+
+
+@media screen and (max-width: 730px) {
+    .menu-btn {
+        display: block;
+    }
+    
+    nav .logo {
+        margin-right: auto;
+    }
+
+    nav .links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero .left h1.hero-text {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    nav .logo .bold {
+        font-size: 19px;
+    }
+
+    nav .logo .light {
+        font-size: 13px;
+    }
+
+    .hero .left h1.hero-text {
+        text-align: center;
+        width: 90%;
+        font-size: 50px;
+        margin: auto;
+    }
+
+    .hero .left .hero-sub {
+        font-size: 25px;
+        left: 25%;
+    }
+
+    .hero .left .hero-sub::before {
+        width: 30px;
+        left: -40px
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .hero .left h1.hero-text {
+        font-size: 30px;
+    }
+
+    .hero .left .hero-sub {
+        font-size: 16px;
+        left: 30%;
+    }
+
+    .support-btn {
+        display: none;
+    }
+
+    .member-btn .now {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024) {
+    header .hero {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    
+    .hero .left, .hero .right  {
+        width: 100%
+        }
+    
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .hero .right img {
+            width: 70%;
+        }
+}
