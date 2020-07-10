@@ -142,7 +142,22 @@ nav .member-btn:hover  {
     font-size: 80px;
 }
 
+@keyframes slideSub {
+    from {
+        left: 10px;
+        opacity: 0;
+    }
+
+    to {
+        left: 70px;
+        opacity: 1;
+    }
+}
+
 .hero .left .hero-sub {
+    animation-name: slideSub;
+    animation-duration: 5s;
+    animation-delay: 2.9s;
     font-family: 'Raleway Regular';
     font-size: 30px;
     text-align: center;
@@ -163,7 +178,21 @@ nav .member-btn:hover  {
     left: -30%;
 }
 
+@keyframes slideBtn {
+    from {
+        top: 10px;
+        opacity: 0;
+    }
+    to {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
 .hero .left .cta-btn {
+    animation-name: slideBtn;
+    animation-duration: 3s;
+    animation-delay: 2.9s;
     padding: 15px 20px;
     background: linear-gradient(to right, #262a2f, #1f2227) !important;
     box-shadow: 2px 8px 15px #111;
@@ -190,8 +219,23 @@ nav .member-btn:hover  {
     padding-top: 10%;
 }
 
+@keyframes slideImg {
+    from {
+        opacity: 0;
+        right: -10px;
+    }
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
+
 .hero .right img {
     width: 100%;
+    animation-name: slideImg;
+    animation-duration: 5s;
+    position: relative;
+    animation-delay: 2.9s;
 }
 
 .scroll-to {
@@ -241,6 +285,39 @@ nav .member-btn:hover  {
     animation-iteration-count: infinite;
 }
 
+.mobile-links {
+    position: fixed;
+    z-index: 51;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #222529ee, #131416ee);
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    line-height: 2;
+}
+
+.mobile-links .close {
+    position: absolute;
+    top: 20%;
+    font-size: 30px;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.mobile-links ul li {
+    list-style: none;
+}
+
+.mobile-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size:30px;
+}
 
 @media only screen and (max-width: 770px) {
    header .hero {
